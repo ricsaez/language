@@ -1,14 +1,9 @@
-  =>
     Type : Type
 
-Type is a value of type Type holds with nothing needed first
+Type is a value of type Type
 
-    <1> : Type,
-    <0> : Type
+    ((<x> : <0 : Type>) -> <1 : Type>) : Type
 
-insert any value of type Type and insert any value of type Type
+you can insert any value of type Type in <0> and in <1>
 
-  =>
-    ((n₁ : <1>) -> <0>) : Type
-
-((n₁ : <1>) -> <0>), the type of functions that take a value n₁ of type <1> and return a value of type <0>, where <0> may contain n₁, is a value of type Type
+((<x> : <0>) -> <1>), the type of functions that take a value <x> of type <0> and return a value of type <1>, where <1> may contain <x>, is a value of type Type
