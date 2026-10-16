@@ -8,7 +8,7 @@ Type is the type whose values are types. Type is itself a type, so Type : Type.
 
 A name stands for a value. It is given in two lines:
 
-    n : A          n first appears, with its type
+    n : A          n first appears, with its type, which must be a type
     n = v          n stands for v, which must be of type A; v can use any name that has already appeared, n included
 
 From then on, writing n means the same as writing v.
@@ -44,8 +44,8 @@ Each pᵢ is a pattern of type Aᵢ: a variable, or a constructor that gives bac
 
 Every list of inputs must match exactly one case.
 
-A call f(a₁, a₂, ...) is worked out in steps: first each aᵢ is worked out; then the case they match is found, and the call stands for its r, with each variable standing for what it matched, everywhere in r. A call of a constructor is finished once its inputs are, and a function is finished as it is. a >> b means a works out to b. Working out can go on without end.
+A call f(a₁, a₂, ...) is worked out in steps: first each aᵢ is worked out; then the case they match is found, and the call stands for its r, with each variable standing for what it matched, everywhere in r. A call of a constructor is finished once its inputs are. Working out can also happen inside any part, a function's included. a >> b means a works out to b. Working out can go on without end.
 
-Two values are the same if they work out to the same thing.
+Two values are the same if they work out to the same thing. A value of a type is also a value of any type that is the same.
 
 All the functions these rules allow, with examples: [example-functions.md](example-functions.md)
