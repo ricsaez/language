@@ -1,16 +1,8 @@
-types = {"Type"}                              # Type : Type
-
+types = {"Type"}
 
 def step(types):
     new = set()
-    for α in types:                           # α : Type
-        for β in types:                       # β : Type
-            new.add(f"({α} → {β})")           # then  α → β : Type
+    for s1 in types:
+        for s2 in types:
+            new.add(f"({s1} → {s2})")
     return types | new
-
-
-for round in range(3):
-    print(f"round {round}: {len(types)} types")
-    for t in sorted(types, key=len)[:5]:
-        print("   ", t)
-    types = step(types)

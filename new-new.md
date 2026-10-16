@@ -1,7 +1,6 @@
     Type : Type
 
-    α : Type
-    β : Type
+    <1> : Type
+    <2> : Type
   then
-    α → β : Type
-
+    (<1> → <2>) : Type
