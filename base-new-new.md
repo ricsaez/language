@@ -2,8 +2,10 @@ Type is a type.
 
 A new name n can be given a type A, if A is a type: then n : A.
 After that, n can be given a value v, if v : A; v can use n. Then n works out to v.
-Or, if n : Type, n can be given constructors, n = c₁ : T₁ | c₂ : T₂ | ...,
-where each cᵢ is a new name and each Tᵢ is a type that gives back n: then cᵢ : Tᵢ.
+Or, if A is Type, n can instead be given constructors, n = c₁ : T₁ | c₂ : T₂ | ...,
+where each cᵢ is a new name and each Tᵢ is a type that gives back n after any number of inputs,
+such as n, (x : B) → n, or (x : B) → (y : C) → n: then cᵢ : Tᵢ.
+If A is (p : B) → Type, the same holds with n(p) for n, and each cᵢ takes p first.
 
 If A is a type, and B is a type when x : A,
 then (x : A) → B is a type.
@@ -14,6 +16,7 @@ then (x ↦ b) : (x : A) → B.
 If T = c₁ : T₁ | c₂ : T₂ | ..., and each rᵢ : B with x replaced by cᵢ(y)(z)...,
 when y, z, ... have the types Tᵢ gives them,
 then (c₁(y)(z)... ↦ r₁ | c₂(y)(z)... ↦ r₂ | ...) : (x : T) → B.
+If T takes an input, the same holds with T(e) for T, and cᵢ(e)(y)(z)... for cᵢ(y)(z)....
 
 If f : (x : A) → B and a : A,
 then f(a) : B, with x replaced by a.
