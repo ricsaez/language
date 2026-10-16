@@ -4,11 +4,11 @@
 Type is a value of type Type holds with nothing needed first
 
     <1> : Type,
-    <2> : Type
+    <0> : Type
 
 insert any value of type Type and insert any value of type Type
 
   =>
-    (<1> -> <2>) : Type
+    ((n₁ : <1>) -> <0>) : Type
 
-(<1> -> <2>), the type of functions that takes values of <1> and return values of <2>, is a value of type Type
+((n₁ : <1>) -> <0>), the type of functions that take a value n₁ of type <1> and return a value of type <0>, where <0> may contain n₁, is a value of type Type
