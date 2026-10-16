@@ -9,7 +9,8 @@ then (x ↦ b) : (x : A) → B.
 If f : (x : A) → B and a : A,
 then f(a) : B, with x replaced by a.
 
-(x ↦ b)(a) works out to b, with x replaced by a.
+(x ↦ b)(a) works out to b, with x replaced by a,
+also as part of something larger, and step after step.
 
 If a : A, B is a type, and A and B work out to the same thing,
 then a : B.
