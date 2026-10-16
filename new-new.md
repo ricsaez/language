@@ -9,3 +9,7 @@
     (<a> ↦ <C : <B>, <a> : <A>>) : ((<a> : <A : Type>) -> <B : Type, <a> : <A>>)
 
 `(<a> ↦ <C : <B>, <a> : <A>>)`, the function that takes `<a>` and gives back `<C>`, where `<C>` is filled with a value of type `<B>` and may use `<a>` as a value of type `<A>`, is a value of type `((<a> : <A : Type>) -> <B : Type, <a> : <A>>)`
+
+    <F : ((<a> : <A : Type>) -> <B : Type, <a> : <A>>)>(<V : <A>>) : <B, <a> := <V>>
+
+`<F>(<V>)`, the call of `<F>` with `<V>`, where `<F>` is filled with a value of type `((<a> : <A>) -> <B>)` and `<V>` is filled with a value of type `<A>`, is a value of type `<B, <a> := <V>>`, which is `<B>` with every `<a>` replaced by `<V>`
