@@ -20,6 +20,8 @@ A function is a value that takes inputs and gives back a value. Its type is a fu
 
 Each xᵢ is a variable: a name with no =, standing for whichever input is given. Only the Aᵢ after it, and B, can use it.
 
+A function type is a value, so it can also be written without a name, anywhere a type can.
+
 If f : (x₁ : A₁, x₂ : A₂, ...) → B and each aᵢ : Aᵢ, then the call f(a₁, a₂, ...) stands for the value f gives back for a₁, a₂, ..., and f(a₁, a₂, ...) : B. In the Aᵢ and in B, each xᵢ stands for aᵢ.
 
 A type can also be made by listing its values, separated by |, which means "or". The list can have one value, or none:
